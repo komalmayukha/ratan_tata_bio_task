@@ -1,76 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration</title>
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .gender-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
+  <div class="form-container">
     <h2>Registration Form</h2>
     <form action="login.html">
-        <p>
-            Name: 
-            <input 
-            type="text"
-            placeholder="Enter your Name"
-            name="firstname"
-            id="firstname"
-            required>
-        </p>
-        <p>
-            Email ID:
-            <input 
-            type="email" 
-            placeholder="Enter your Email ID"
-            name="email" 
-            id="email"
-            required>
-        </p>
-        <p>
-            Password: 
-            <input 
-            type="password"
-            placeholder="Enter Password"
-            name="password"
-            id="password"
-            required>
-        </p>
-        <p>
-            Confirm Password: 
-            <input 
-            type="password"
-            placeholder="Re-enter your Password" 
-            name="Confirm password" 
-            id="Confirm password"
-            required>
-        </p>
-        <p>
-            Mobile Number: 
-            <input 
-            type="number" 
-            placeholder="Enter Mobile Number" 
-            name="mobile"
-            id="mobile"
-            required>
-        </p>
-        <p>
-            Gender: 
-            <input type="radio" id="male" name="gender">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender">
-            <label for="female">Female</label>
-    
-        </p>
-        <p>
-            Date of Birth: 
-            <label for=""></label>
-            <input type="date">
-        </p>
-        <p>
-            Address: 
-            <textarea name="address" id="address" placeholder="Enter your Address"></textarea>
-        </p>
-        <button>Register</button>
+      <div class="form-group">
+        <label for="firstname">Name:</label>
+        <input type="text" placeholder="Enter your Name" name="firstname" id="firstname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email ID:</label>
+        <input type="email" placeholder="Enter your Email ID" name="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" placeholder="Re-enter your Password" name="confirm-password" id="confirm-password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile Number:</label>
+        <input type="number" placeholder="Enter Mobile Number" name="mobile" id="mobile" required>
+      </div>
+
+      <div class="form-group gender-group">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" placeholder="Enter your Address"></textarea>
+      </div>
+
+      <button type="submit">Register</button>
     </form>
+  </div>
 </body>
 </html>
